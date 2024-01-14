@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>William FES Project</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <section id="landing-page">
@@ -17,11 +17,23 @@
           />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link"></li>
-          <li class="nav__link"></li>
+          <li class="nav__link">HOME</li>
+          <li class="nav__link">ABOUT</li>
+          <li class="nav__link">CONTACT</li>
         </ul>
       </nav>
-      <header class="hero"></header>
+      <header class="hero">
+        <h1 class="hero__title">Browse Our Movies</h1>
+        <form action="" class="hero__form">
+          <input
+            type="text"
+            class="form__input"
+            placeholder="Search by Title"
+          />
+          <br />
+          <button type="submit" class="form__submit--btn">Submit</button>
+        </form>
+      </header>
     </section>
   </body>
 </html>

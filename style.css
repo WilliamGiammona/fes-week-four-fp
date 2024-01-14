@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+.orange {
+  color: #f06449;
+}
+
+li {
+  list-style: none;
+}
+
+.orange {
+  color: #f06449;
+}
+
+#landing-page {
+  width: 100%;
+  height: 100vh;
+}
+
+/********************
+
+NAVIGATION
+
+*********************/
+
+nav {
+  padding: 0 2rem;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav__logo--img--wrapper {
+  width: 200px;
+  height: 50px;
+}
+
+.nav__logo--img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav__link--list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  margin-top: 16px;
+  margin-right: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #242424;
+  cursor: pointer;
+  position: relative; /* Needed for absolute positioning of ::after */
+}
+
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 0; /* Initial width */
+  height: 1.5px; /* Height of the line */
+  background: hsla(0, 0%, 14%, 0.8); /* Color of the line */
+  transition: all 300ms ease; /* 3 seconds transition */
+  position: absolute;
+  bottom: -2px; /* Position below the text */
+  left: 0;
+}
+
+.nav__link:hover {
+  color: hsla(0, 0%, 14%, 0.8);
+}
+
+.nav__link:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+/****************************************************************
+
+HERO SECTION
+
+*****************************************************************/
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__title {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.hero__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__input {
+  border: 2px;
+  border-radius: 20px;
+  width: 20rem;
+  height: 2rem;
+  padding: 1rem;
+}
+
+.form__input:focus {
+  outline: 2px solid #242424;
+}
+
+.form__submit--btn {
+  display: flex;
+  align-self: center;
+  border-radius: 20px;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  color: rgb(245, 245, 245);
+  font-weight: 700;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+.form__submit--btn:hover {
+  background-color: #0069d9;
+}
