@@ -66,18 +66,18 @@ nav {
   font-weight: 400;
   color: #242424;
   cursor: pointer;
-  position: relative; /* Needed for absolute positioning of ::after */
+  position: relative;
 }
 
 .nav__link::after {
   content: "";
   display: block;
-  width: 0; /* Initial width */
-  height: 1.5px; /* Height of the line */
-  background: hsla(0, 0%, 14%, 0.8); /* Color of the line */
-  transition: all 300ms ease; /* 3 seconds transition */
+  width: 0;
+  height: 1.5px;
+  background: hsla(0, 0%, 14%, 0.8);
+  transition: all 300ms ease;
   position: absolute;
-  bottom: -2px; /* Position below the text */
+  bottom: -2px;
   left: 0;
 }
 
@@ -107,6 +107,7 @@ HERO SECTION
   margin-bottom: 3rem;
   font-size: 3rem;
   font-weight: 900;
+  text-align: center;
 }
 
 .hero__form {
@@ -152,7 +153,7 @@ HERO SECTION
   padding: 0 2rem;
   display: grid; /* Set the display to grid */
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
+  grid-template-rows: repeat(2, 1fr); /* 3 equal rows */
   gap: 10px; /* This sets both row and column gaps */
 }
 
@@ -161,7 +162,7 @@ HERO SECTION
   flex-direction: column;
   align-items: center;
   border: 0.5px solid gray;
-  height: 30rem;
+  height: 35rem;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -176,7 +177,7 @@ HERO SECTION
 
 .hero__movies--movie--poster--img--wrapper {
   width: 100%;
-  height: 75%;
+  height: 70%;
 }
 
 .hero__movies--movie--poster--img {
@@ -225,5 +226,30 @@ HERO SECTION
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero__movies--wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .nav__logo--img--wrapper {
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero__movies--wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .nav__logo--img--wrapper {
+    width: 100px;
+    height: 30px;
   }
 }
