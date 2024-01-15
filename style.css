@@ -206,3 +206,24 @@ HERO SECTION
   font-size: 1.5rem;
   color: #999;
 }
+
+.fa-spinner {
+  margin-top: 5rem;
+  animation: rotate 600ms infinite linear;
+  font-size: 60px;
+  color: #7342d6;
+  transform-origin: center;
+}
+
+.hero .hero__movies--loading.fas {
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
