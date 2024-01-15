@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>William FES Project</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js"></script>
   </head>
   <body>
     <section id="landing-page">
@@ -18,21 +19,23 @@
         </figure>
         <ul class="nav__link--list">
           <li class="nav__link">HOME</li>
-          <li class="nav__link">ABOUT</li>
-          <li class="nav__link">CONTACT</li>
         </ul>
       </nav>
       <header class="hero">
         <h1 class="hero__title">Browse Our Movies</h1>
-        <form action="" class="hero__form">
+        <form action="" class="hero__form" onsubmit="movieChoice(event);">
+          <label for="movieSearch" class="form__label"></label>
           <input
             type="text"
+            id="movieSearch"
             class="form__input"
             placeholder="Search by Title"
           />
-          <br />
           <button type="submit" class="form__submit--btn">Submit</button>
         </form>
+        <div class="hero__movies--wrapper hero__movies--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
       </header>
     </section>
   </body>
